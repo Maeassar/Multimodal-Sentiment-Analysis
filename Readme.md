@@ -1,11 +1,11 @@
-## AI Lab5: 多模态情感分析（Multimodal Sentiment Analysis）
+# AI Lab5: 多模态情感分析（Multimodal Sentiment Analysis）
 <hr/>
 
-### Introduction
+## Introduction
 <hr/>
 本实验考虑文本和图像两个维度的特征，来进行一个双模态情感分析的三分类任务， 分类标签为positive, negative, neutral。
 
-### Structure
+## Structure
 <hr/>
 
 ```
@@ -57,7 +57,7 @@ C:.
 
 ```
 
-### Setup
+## Setup
 <hr/>
 本项目所使用的环境为python3.9(pytorch2023),
 
@@ -77,7 +77,7 @@ pip install --upgrade pip
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 pip install -r requirements.txt
 ```
-### Run pipeline for train
+## Run pipeline for train
 <hr/>
 本实验使用argparse包进行模型和超参数的选择，可选的参数如下：
 
@@ -93,8 +93,8 @@ pip install -r requirements.txt
 python main.py --do_train --fuse_model_type ImprovedMultimodel --epoch 5
 ```
 
-### Run pipeline for test
-
+## Run pipeline for test
+<hr/>
 如果您想在验证集上对模型进行测试：
 
 ```python
@@ -112,7 +112,7 @@ python main.py --do_val_test --fuse_model_type ImprovedMultimodel --img_only(or 
 ```python
 python main.py --do_test --fuse_model_type ImprovedMultimodel
 ```
-### Reference
+## Reference
 <sup><a href="#ref1">1</a></sup>  <span name = "ref4">[DaSE_ContemporaryAI_22Spring/5_Multimodal_Sentiment_Analysis_Model at main · younghojan/DaSE_ContemporaryAI_22Spring (github.com)](https://github.com/younghojan/DaSE_ContemporaryAI_22Spring/tree/main/5_Multimodal_Sentiment_Analysis_Model)</span> 
 
 <sup><a href="#ref1">2</a></sup>  <span name = "ref4">[attention-is-all-you-need-pytorch/transformer/Models.py at master · jadore801120/attention-is-all-you-need-pytorch (github.com)](https://github.com/jadore801120/attention-is-all-you-need-pytorch/blob/master/transformer/Models.py)</span>
