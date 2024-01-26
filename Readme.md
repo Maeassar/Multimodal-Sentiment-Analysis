@@ -11,7 +11,6 @@
 ```
 C:.
 │  Config.py #默认参数设置
-│  createresult.py #生成结果
 │  data_processing.py #数据预处理
 │  main.py #项目运行文件
 │  Readme.md #项目说明
