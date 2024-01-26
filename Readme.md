@@ -1,12 +1,9 @@
 # AI Lab5: 多模态情感分析（Multimodal Sentiment Analysis）
-<hr/>
 
 ## Introduction
-<hr/>
 本实验考虑文本和图像两个维度的特征，来进行一个双模态情感分析的三分类任务， 分类标签为positive, negative, neutral。
 
 ## Structure
-<hr/>
 
 ```
 C:.
@@ -57,7 +54,6 @@ C:.
 ```
 
 ## Setup
-<hr/>
 本项目所使用的环境为python3.9(pytorch2023),
 
 - chardet==5.2.0
@@ -77,7 +73,6 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 pip install -r requirements.txt
 ```
 ## Run pipeline for train
-<hr/>
 本实验使用argparse包进行模型和超参数的选择，可选的参数如下：
 
 - --do_train 选择后训练模型
@@ -93,7 +88,6 @@ python main.py --do_train --fuse_model_type ImprovedMultimodel --epoch 5
 ```
 
 ## Run pipeline for test
-<hr/>
 如果您想在验证集上对模型进行测试：
 
 ```python
