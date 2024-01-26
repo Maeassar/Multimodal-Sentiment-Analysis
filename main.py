@@ -21,7 +21,6 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--do_train', action='store_true', help='training')
 parser.add_argument('--fuse_model_type', default='SimpleMultimodel', help='融合模型类别', type=str)
 parser.add_argument('--lr', default=5e-5, help='设置学习率', type=float)
-parser.add_argument('--weight_decay', default=1e-2, help='设置权重衰减', type=float)
 parser.add_argument('--epoch', default=4, help='设置训练轮数', type=int)
 
 parser.add_argument('--do_val_test', action='store_true', help='val-test')
@@ -33,7 +32,6 @@ parser.add_argument('--load_model_path', default=None, help='已经训练好的�
 
 args = parser.parse_args()
 config.learning_rate = args.lr
-config.weight_decay = args.weight_decay
 config.epoch = args.epoch
 config.fuse_model_type = args.fuse_model_type
 config.load_model_path = args.load_model_path
@@ -84,13 +82,6 @@ def read_from_file(path, data_dir, only=None):
         f.close()
 
     return data
-
-def save_model(output_path, model_type, model):
-    output_model_dir = os.path.join(output_path, model_type)
-    if not os.path.exists(output_model_dir): os.makedirs(output_model_dir)    # 没有文件夹则创建
-    model_to_save = model.module if hasattr(model, 'module') else model     # Only save the model it-self
-    output_model_file = os.path.join(output_model_dir, "pytorch_model.bin")
-    torch.save(model_to_save.state_dict(), output_model_file)
 
 current_dir = os.getcwd()
 train_data_processed = read_from_file(current_dir + "/dataset/train.json", current_dir + "/dataset/data", config.only)
