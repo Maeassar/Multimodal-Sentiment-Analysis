@@ -3,7 +3,7 @@
 
 ### Introduction
 <hr/>
-本实验考虑**文本和图像**两个维度的特征，来进行一个**双模态情感分析**的三分类任务， 分类标签为positive, negative, neutral。
+本实验考虑文本和图像两个维度的特征，来进行一个双模态情感分析的三分类任务， 分类标签为positive, negative, neutral。
 
 ### Structure
 <hr/>
@@ -113,5 +113,6 @@ python main.py --do_val_test --fuse_model_type ImprovedMultimodel --img_only(or 
 python main.py --do_test --fuse_model_type ImprovedMultimodel
 ```
 ### Reference
-<sup><a href="#ref1">1</a></sup>  <span name = "ref4">[DaSE_ContemporaryAI_22Spring/5_Multimodal_Sentiment_Analysis_Model at main · younghojan/DaSE_ContemporaryAI_22Spring (github.com)](https://github.com/younghojan/DaSE_ContemporaryAI_22Spring/tree/main/5_Multimodal_Sentiment_Analysis_Model)</span>
+<sup><a href="#ref1">1</a></sup>  <span name = "ref4">[DaSE_ContemporaryAI_22Spring/5_Multimodal_Sentiment_Analysis_Model at main · younghojan/DaSE_ContemporaryAI_22Spring (github.com)](https://github.com/younghojan/DaSE_ContemporaryAI_22Spring/tree/main/5_Multimodal_Sentiment_Analysis_Model)</span> 
+
 <sup><a href="#ref1">2</a></sup>  <span name = "ref4">[attention-is-all-you-need-pytorch/transformer/Models.py at master · jadore801120/attention-is-all-you-need-pytorch (github.com)](https://github.com/jadore801120/attention-is-all-you-need-pytorch/blob/master/transformer/Models.py)</span>
